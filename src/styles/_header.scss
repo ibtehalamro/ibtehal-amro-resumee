@@ -1,0 +1,106 @@
+@import "src/styles/config";
+
+
+.bottom-header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: $z-fixed;
+  background-color: $body-color;
+  box-shadow: 0px -3px 5px 1px #8b8b8d;
+  transition: .5s;
+
+  //pc only style
+  @media (min-width: 786px) {
+    display: none;
+  }
+  //end of pc only style
+
+  .nav {
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .show-menu {
+      bottom: $header-height;
+    }
+
+    &__menu {
+      @media screen and (max-width: 968px) {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        padding: 2rem 1.5rem;
+        background-color: $body-color;
+        box-shadow: 0px -3px 5px 1px #3b3b41;
+        border-radius: 1rem 1rem 0 0;
+        z-index: $z-fixed;
+        transition: .3s;
+      }
+    }
+
+    &__logo  {
+      color: $title_color ;
+      font-weight: $Cairo_FONT_Weight_semi-bold;
+      margin-left: 1rem;
+    }
+
+    &__toggle {
+      font-size: 1.5rem;
+      cursor: pointer;
+
+      a, a::before, a::after {
+        width: 1.8rem;
+        background-color: $title_color;
+        height: .15rem;
+        display: block;
+        //border-radius: 50%;
+        margin-right: 1rem;
+      }
+
+      a {
+        position: relative;
+        &::before, &::after {
+          content: "";
+          position: absolute;
+        }
+        &::before {
+          bottom: .4rem;
+        }
+        &::after {
+          top: .4rem;
+        }
+      }
+    }
+
+
+    &__item {
+      text-align: center;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+
+      z-index: $z-fixed;
+
+    }
+
+    &__link {
+      display: flex;
+      flex-direction: column;
+      font-size: small;
+      font-weight: $Cairo_FONT_Weight_semi-bold;
+      color: $text_color_light;
+
+      &:hover {
+        color: $title_color;
+
+      }
+    }
+  }
+}

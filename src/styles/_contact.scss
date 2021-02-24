@@ -1,0 +1,16 @@
+
+.contact {
+
+  &__links {
+
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .2rem;
+
+  }
+}
+

@@ -1,0 +1,24 @@
+.skill {
+  //mobile + pc
+  width: 100%;
+  // end of mobile + pc
+
+
+  //mobile only style
+  padding: 0 2rem;
+  //end of mobile only style
+
+
+  //pc only style
+  @media  (min-width: 426px) and (max-width: 786px) {
+    padding: 0 1rem;
+    width: 90%;
+
+  }
+  //end of pc only style
+
+
+  &__item {
+    list-style: circle;
+  }
+}

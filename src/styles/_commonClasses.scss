@@ -1,0 +1,54 @@
+@import "src/styles/config";
+
+.lg-icon {
+  height: $large-image;
+  width: $large-image;
+  border-radius: 50%;
+
+  border: 1px solid $body-color;
+  box-shadow: 5px -2px 2px 2px #a29a9a;
+  transition: .5s ease-in;
+
+  &:hover {
+    box-shadow: 6px -2px 7px 2px #6d6a6a;
+  }
+}
+
+.sm-icon {
+  height: $small-image;
+  width: $small-image;
+}
+
+.d-flex {
+  display: flex;
+
+  &-column {
+    flex-direction: column;
+  }
+
+  &-center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+.d-grid {
+  display: grid;
+}
+
+.bodySize {
+  //mobile only style
+
+  margin: 0;
+  width: 100%;
+  //end of mobile only style
+
+
+  //pc only style
+  @media (min-width: 786px) {
+    max-width: 968px;
+    width: calc(100% - 3rem);
+    margin: 1rem auto;
+  }
+}
