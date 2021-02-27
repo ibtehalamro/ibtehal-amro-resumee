@@ -1,18 +1,16 @@
 @import "src/styles/config";
 
 .section {
-
+opacity: 0;
   //mobile + pc
 
   margin-top: 2rem;
 
   // end of mobile + pc
 
-
   //mobile only style
   align-items: center;
   justify-content: center;
-
   //end of mobile only style
 
   //pc only style
@@ -22,6 +20,13 @@
 
   }
   //end of pc only style
+
+
+
+  &.is-visible{
+    opacity: 1;
+    transition: all 3s;
+  }
 
   &__title {
     margin-bottom: 1rem;
@@ -75,3 +80,4 @@
   }
 
 }
+

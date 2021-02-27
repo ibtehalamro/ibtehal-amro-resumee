@@ -7,7 +7,6 @@ const AboutMe = () => {
             <img className=" lg-icon " src={process.env.PUBLIC_URL + "/Asset/icons/profile.png"}
                  alt={"profile icon"}/>
 
-
             <h1 className={"about-me__name"}> IBTEHAL AMRO</h1>
             <h3 className={"about-me__job"}> Web Developer</h3>
         </div>

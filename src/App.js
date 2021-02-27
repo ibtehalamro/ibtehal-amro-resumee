@@ -8,7 +8,6 @@ import Main from "./Components/Main Content/Main";
 
 function App(props) {
 
-
     const homeRef = useRef();
     const careerObjectivesRef = useRef();
     const graduationProjectRef = useRef();
@@ -17,11 +16,7 @@ function App(props) {
     const softSkillsRef = useRef();
     const languagesRef = useRef();
 
-    function scrollfun(articleRef) {
 
-
-        articleRef.current.scrollIntoView({behavior: 'smooth'})
-    }
 
     return (
         <div className="App">
@@ -32,7 +27,7 @@ function App(props) {
                     educationalBackgroundRef,
                     technicalSkillsRef,
                     softSkillsRef,
-                    languagesRef]} scrollfun={scrollfun}/>
+                    languagesRef]} />
 
                 <main className={"mainContent d-grid bodySize"}>
                     <LeftSide ref={{homeRef}}/>
