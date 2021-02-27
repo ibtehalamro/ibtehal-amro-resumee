@@ -13,6 +13,7 @@ const SectionWithTitle = forwardRef((props, ref) => {
         const callback = (entries) => {
             entries.forEach(entry => {
                 const {target} = entry;
+                target.classList.add("withjs");
 
                 if (entry.intersectionRatio >= 0.15) {
                     target.classList.add("is-visible");
@@ -20,7 +21,6 @@ const SectionWithTitle = forwardRef((props, ref) => {
                 } else {
                     target.classList.remove("is-visible");
                     console.log("removed on "+props.title)
-
                 }
             });
         };

@@ -52,11 +52,3 @@
     margin: 1rem auto;
   }
 }
-
-.showScroll{
-  transform: translateX(  -100vw);
-transition: transform 1s;
-height: 900px;
-width: 300px;
-background-color: red;
-}
