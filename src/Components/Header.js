@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 
 
-const Header = ({scrollfun, refs}) => {
+const Header = ({ refs}) => {
 
     const [toggle, setToggle] = useState(false)
 
@@ -10,6 +10,11 @@ const Header = ({scrollfun, refs}) => {
         console.log("toggle", toggle)
         setToggle(!toggle)
 
+    }
+    function scrollfun(articleRef) {
+
+
+        articleRef.current.scrollIntoView({behavior: 'smooth'})
     }
 
     return (

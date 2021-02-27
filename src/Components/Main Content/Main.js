@@ -1,4 +1,4 @@
-import React ,{forwardRef} from 'react';
+import React ,{forwardRef,useLayoutEffect} from 'react';
 import SectionWithTitle from "./Reusable Components/SectionWithTitle";
 import ParagraphComponent from "./Reusable Components/ParagraphComponent";
 import {
@@ -21,6 +21,36 @@ const Main =forwardRef ((props,ref) =>{
         softSkillsRef,
         languagesRef
     } = ref;
+
+    useLayoutEffect(() => {
+        let options = {
+            rootMargin: "0px",
+            threshold: 0.15
+        };
+
+        const callback = (entries) => {
+            entries.forEach(entry => {
+                const {target} = entry;
+                target.classList.add("withjs");
+
+                if (entry.intersectionRatio >= 0.15 && entry.isIntersecting ) {
+                    target.classList.add("is-visible");
+                } else {
+                    target.classList.remove("is-visible");
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(callback, options);
+
+        if (ref !== null)
+            for (const [key, value] of Object.entries(ref)) {
+
+                observer.observe(value.current);
+            }
+
+    }, []);
+
 
 
     return (
