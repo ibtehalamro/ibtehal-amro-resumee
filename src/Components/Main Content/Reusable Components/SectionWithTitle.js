@@ -31,28 +31,6 @@ const SectionWithTitle = forwardRef((props, ref) => {
             observer.observe(ref.current);
 
 
-        // if(ref!==null){
-        //     console.log("ref:"+props.title , ref)
-        //     const topPosition = ref.current.getBoundingClientRect().top;
-        //     const onScroll = () => {
-        //         const scrollPosition = window.scrollY + window.innerHeight;
-        //         if (topPosition < scrollPosition) {
-        //             // trigger animation
-        //             doShow(true)
-        //             console.log("section scroll",props.title)
-        //         }else{
-        //             doShow(false)
-        //         }
-        //     };
-        //
-        //     window.addEventListener("scroll", onScroll); return () => {
-        //         doShow(false)
-        //
-        //         window.removeEventListener("scroll", onScroll);
-        //     }
-        // }
-
-
     }, []);
 
     return (
