@@ -1,2 +1,2 @@
 # You can visit bellow link to view the CV online
-[Ibtehal Amro CV](tehal-amro-cv.web.app) 
+[Ibtehal Amro CV](https://ibtehal-amro-cv.web.app) 
